@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up-Spotify</title>
+    <link rel="stylesheet" href="./signup.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="head">
+        <img src="./img/Spotify_Logo_CMYK_Black.png" alt="" class="logo" />
+      </div>
+      <h1>Sign up for free to start listening.</h1>
+    </div>
+    <div class="signUp-btns">
+      <button class="fb" onclick="fbFun()">
+        <p>
+          <img src="./img/fb.png" alt="" />
+          Sign up with Facebook
+          <a href=""></a>
+        </p>
+      </button>
+      <button class="fb google" onclick="googleFun()">
+        <p>
+          <img src="./img/google-logo-9808.png" alt="" />
+          Sign up with Google
+        </p>
+      </button>
+      <div class="or">
+        <hr />
+        <span>or</span>
+        <hr />
+      </div>
+    </div>
+    <form action="" class="signUp-form">
+      <div class="email-con">
+        <p>What's your email?</p>
+        <input type="text" placeholder="Enter your email" />
+        <a
+          href="https://accounts.spotify.com/en/login/phone?intent=signup&continue=https%3A%2F%2Fwww.spotify.com%2Faccount%2Foverview%2F"
+          >Use phone number instead.</a
+        >
+      </div>
+
+      <div class="email-con">
+        <p>Confirm your email</p>
+        <input type="text" placeholder="Enter your email again. " />
+      </div>
+      <div class="email-con">
+        <p>Create a password</p>
+        <input type="text" placeholder="Create a password" />
+      </div>
+      <div class="email-con">
+        <p>What should we call you?</p>
+        <input type="text" placeholder="Enter a profile name." />
+      </div>
+      <p class="line">This appears on your profile.</p>
+      <div class="DOB">
+        <p class="birth">What's your date of birth?</p>
+        <div class="date">
+          <div class="year box">
+            <p>year</p>
+            <input type="text" placeholder="YYY" />
+          </div>
+          <div class="month box">
+            <p>month</p>
+            <select name="month" id="month">
+              <option style="color: #878787" value="" disabled selected hidden>
+                Month
+              </option>
+              <option value="01">January</option>
+              <option value="02">February</option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+              <option value="05">May</option>
+              <option value="06">June</option>
+              <option value="07">July</option>
+              <option value="08">August</option>
+              <option value="09">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+          </div>
+          <div class="day box">
+            <p>day</p>
+            <input type="text" placeholder="DD" />
+          </div>
+        </div>
+      </div>
+      <p class="gender-line">What's your gender?</p>
+      <div class="gender">
+        <div class="inner-gen">
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+        </div>
+
+        <div class="inner-gen">
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+        </div>
+
+        <div class="inner-gen">
+          <input
+            type="radio"
+            id="Non-binary"
+            name="gender"
+            value="Non-binary"
+          />
+          <label for="Non-binary">Non-binary</label>
+        </div>
+      </div>
+      <div class="tick">
+        <input type="checkbox" />
+        <p>I would prefer not to receive marketing messages from Spotify</p>
+      </div>
+      <div class="tick">
+        <input type="checkbox" />
+        <p>
+          Share my registration data with Spotify's content providers for
+          marketing purposes.
+        </p>
+      </div>
+      <div class="captcha">
+        <div class="inner-div">
+          <div class="checkBox">
+            <input type="checkbox" />
+            <p>i'm not a robot</p>
+          </div>
+          <img src="./img/recaptcha.png" alt="" />
+        </div>
+      </div>
+      <div class="footer">
+        <div class="TC">
+          <p>
+            By clicking on sign-up, you agree to Spotify's
+            <a href="https://www.spotify.com/in-en/legal/end-user-agreement/"
+              >Terms and Conditions of Use.</a
+            >
+          </p>
+          <p>
+            To learn more about how Spotify collects, uses, shares and protects
+            your personal data, please see
+            <a href="https://www.spotify.com/in-en/legal/privacy-policy/">
+              Spotify's Privacy Policy.</a
+            >
+          </p>
+        </div>
+        <div class="send-div">
+          <button class="send-btn">Sign up</button>
+          <p>Have an account? <a href="./main.html"> Log in</a>.</p>
+        </div>
+      </div>
+    </form>
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,270 @@
+body {
+  font-family: spotify-circular, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  padding: 25px 0px 10px;
+  margin-bottom: 30px;
+  width: 100%;
+  border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+.head {
+  padding: 0px 0px 12px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  height: 56px;
+  width: 182px;
+}
+.container {
+  flex: 3 1 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.content {
+  width: 450px;
+  height: 704.8px;
+}
+.rows {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.text {
+  font-size: 0.875rem;
+  text-transform: none;
+  letter-spacing: normal;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 0px;
+  color: inherit;
+  margin-bottom: 0px;
+  font-weight: 750;
+}
+
+.fb {
+  width: 450px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(248, 248, 248);
+  background-color: rgb(59, 89, 152);
+  text-transform: uppercase;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 500px;
+  border: 1px solid #878787;
+}
+.fb:hover {
+  border: 1px solid black;
+}
+
+.fb p {
+  font-size: 0.875rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #878787;
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  color: rgba(255, 255, 255, 0.872);
+  align-items: center;
+}
+
+.fb p img {
+  width: 20px;
+  height: 20px;
+}
+.apple {
+  background-color: black;
+}
+
+.google {
+  background-color: white;
+}
+
+.google p {
+  color: #878787;
+}
+
+.or {
+  display: flex;
+  flex-direction: row;
+}
+
+.or hr {
+  margin: 12px 0px 20px;
+  flex: 1 1 0%;
+  border-top: 1px solid rgb(217, 218, 220);
+  display: block;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+}
+
+.or span {
+  flex: 0.3 1 0%;
+  align-self: center;
+  text-align: center;
+  line-height: 1px;
+  font-weight: 700;
+  font-size: 12px;
+  background: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+.login-container {
+  display: block;
+}
+
+.email-con {
+  padding-bottom: 12px;
+}
+.email-con p {
+  font-size: 0.775rem;
+  line-height: 1.25rem;
+  text-transform: none;
+  letter-spacing: normal;
+  box-sizing: border-box;
+  margin-top: 0px;
+  color: inherit;
+  font-weight: 600;
+}
+
+.email-con input {
+  width: 450px;
+  height: 34px;
+  border-radius: 4px;
+  border: 1px solid #878787;
+  padding: 10px;
+  font-size: 1rem;
+}
+.email-con input:hover {
+  border: 1px solid black;
+}
+.email-con input::placeholder {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.login-container a {
+  color: black;
+  text-decoration: none;
+}
+.login-container a:hover {
+  text-decoration: underline;
+}
+
+.bottom-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.checkBox {
+  padding: 12px;
+  align-items: center;
+  display: flex;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  position: relative;
+}
+
+.checkBox input {
+  margin-right: 12px;
+  width: 16px;
+  height: 16px;
+  border-width: 0px;
+  accent-color: #1ed760;
+  background-color: white;
+}
+
+.checkBox p {
+  display: inline;
+}
+.bottom-btn {
+  width: 124px;
+  height: 48px;
+  display: block;
+  border-radius: 500px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  background-color: #1ed760;
+}
+.bottom-btn:hover {
+  border: 2px solid #1ed760;
+}
+
+.login-btn {
+  border: none;
+  width: auto;
+  background-color: #1ed760;
+}
+
+.login-btn p {
+  letter-spacing: 2px;
+  font-size: 0.875rem;
+  font-weight: 550;
+}
+
+.line {
+  margin: 12px 0px 20px;
+  flex: 1 1 0%;
+  border-top: 1px solid rgb(217, 218, 220);
+}
+.footer {
+  width: 450px;
+  height: 92;
+  display: block;
+}
+
+.footer p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: none;
+  letter-spacing: normal;
+  text-align: center;
+  padding-bottom: 5px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+.footer-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 31px;
+  position: relative;
+  border: 1px solid #878787;
+  width: 100%;
+  height: 48px;
+  background-color: transparent;
+  border-radius: 500px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  cursor: pointer;
+  margin-bottom: 12px;
+  color: #6a6a6a;
+}
+.footer-btn:hover {
+  border: 1px solid black;
+}

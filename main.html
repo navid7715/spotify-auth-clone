@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=], initial-scale=1.0" />
+    <title>Login-Spotify</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="head">
+        <img src="./img/Spotify_Logo_CMYK_Black.png" alt="" class="logo" />
+      </div>
+    </div>
+    <div class="container">
+      <div class="content">
+        <div class="rows">
+          <p class="text">To continue, log in to Spotify.</p>
+          <button class="fb" onclick="fbFun()">
+            <p>
+              <img src="./img/fb.png" alt="" />
+              CONTINUE WITH FACEBOOK
+              <a href=""></a>
+            </p>
+          </button>
+          <button class="fb apple" onclick="appleFun()">
+            <p>
+              <img src="./img/apple-24.png" alt="" />
+              CONTINUE WITH APPLE
+            </p>
+          </button>
+          <button class="fb google" onclick="googleFun()">
+            <p>
+              <img src="./img/google-logo-9808.png" alt="" />
+              CONTINUE WITH GOOGLE
+            </p>
+          </button>
+          <button class="fb google" onclick="phoneFun()">
+            <p>
+              <img src="./img/apple-24.png" alt="" />
+              CONTINUE WITH PHONE NUMBER
+            </p>
+          </button>
+          <div class="or">
+            <hr />
+            <span>or</span>
+            <hr />
+          </div>
+          <div class="login-container">
+            <div class="email-con">
+              <p>Email address or username</p>
+              <input type="text" placeholder="Email address or username" />
+            </div>
+
+            <div class="email-con pass-con">
+              <p>Password</p>
+              <input type="text" placeholder="Password" />
+            </div>
+            <a href="./forgot-page.html">Forgot your password?</a>
+            <div class="bottom-con">
+              <div class="checkBox">
+                <input type="checkbox" />
+                <p>Remember me</p>
+              </div>
+              <div class="bottom-btn">
+                <button class="login-btn">
+                  <p>LOG IN</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <hr class="line" />
+          <div class="footer">
+            <p>Don't have an account?</p>
+            <button class="footer-btn" onclick="signUp()">
+              SIGN UP FOR SPOTIFY
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
