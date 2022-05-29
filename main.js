@@ -13,3 +13,151 @@ function phoneFun() {
 function signUp() {
     window.location.href = "signup.html"
 }
+
+// Form Validation 
+
+
+function validateForm() {
+    var returnval = true;
+    var email = document.getElementById("email").value
+    var p = document.getElementById("pass").value
+
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+        document.getElementsByClassName("emailError")[0].innerHTML = ""
+    } else {
+        document.getElementsByClassName("emailError")[0].innerHTML = "*invalid Username or Email"
+    }
+
+
+    if (/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(p)) {
+        document.getElementsByClassName("passError")[0].innerHTML = ""
+        console.log("hello");
+
+    } else {
+        document.getElementsByClassName("passError")[0].innerHTML = " *Your password must be at least 8 characters. Must contain at least one letter and at least one digit."
+
+    }
+
+
+
+}
+
+
+
+function validateForm2() {
+    var returnval = true;
+    var email = document.getElementById("email").value
+
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+        document.getElementsByClassName("emailError")[0].innerHTML = ""
+    } else {
+        document.getElementsByClassName("emailError")[0].innerHTML = "*invalid Username or Email"
+    }
+}
+
+
+
+
+function validateForm3() {
+    event.preventDefault();
+    var returnval = true;
+    var email = document.getElementById("email").value
+    var p = document.getElementById("pass").value
+    var conEmail = document.getElementById("conEmail").value
+    var name = document.getElementById("name").value
+    var year = document.getElementById("year").value
+    var month = document.getElementById("month").value
+    var day = document.getElementById("day").value
+    var g1 = document.getElementById("male")
+    var g2 = document.getElementById("female")
+    var g3 = document.getElementById("nonBinary")
+    var captcha = document.getElementById("captcha")
+
+
+    captcha.checked == true ? document.getElementsByClassName("captchaError")[0].innerHTML = "" :
+        document.getElementsByClassName("captchaError")[0].innerHTML = "*click on captcha"
+
+
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+        document.getElementsByClassName("emailError")[0].innerHTML = ""
+    } else {
+        document.getElementsByClassName("emailError")[0].innerHTML = "*invalid Username or Email"
+    }
+
+    if (email === conEmail) {
+        document.getElementsByClassName("conEmailError")[0].innerHTML = ""
+    } else {
+        document.getElementsByClassName("conEmailError")[0].innerHTML = "*Your Email is Not Matching"
+    }
+
+
+    if (/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(p)) {
+        document.getElementsByClassName("passError")[0].innerHTML = ""
+
+    } else {
+        document.getElementsByClassName("passError")[0].innerHTML = " *Your password must be at least 8 characters. Must contain at least one letter and at least one digit."
+
+    }
+
+    if (name.length === 0) {
+        document.getElementsByClassName("nameError")[0].innerHTML = "*Name is Required"
+    } else {
+        document.getElementsByClassName("nameError")[0].innerHTML = ""
+
+    }
+
+
+    if (day.length === 0) {
+        document.getElementsByClassName("dateError")[0].innerHTML = "*Date is Required"
+
+    }
+    else if (month.length === 0) {
+        document.getElementsByClassName("dateError")[0].innerHTML = "*Date is Required"
+
+    }
+    else if (year.length === 0) {
+        document.getElementsByClassName("dateError")[0].innerHTML = "*Date is Required"
+
+    } else {
+        document.getElementsByClassName("dateError")[0].innerHTML = ""
+
+    }
+
+
+
+    if (g1.checked == true) {
+        document.getElementsByClassName("genderError")[0].innerHTML = ""
+    }
+    else if (g2.checked == true) {
+        document.getElementsByClassName("genderError")[0].innerHTML = ""
+    }
+    else if (g3.checked == true) {
+        document.getElementsByClassName("genderError")[0].innerHTML = ""
+    }
+    else (
+        document.getElementsByClassName("genderError")[0].innerHTML = "*please select anyone"
+    )
+
+
+}
+
+
+
+
+const togglePassword = document.querySelector("#togglePassword");
+const password = document.querySelector("#pass");
+
+togglePassword.addEventListener("click", function () {
+    // toggle the type attribute
+    const type = password.getAttribute("type") === "password" ? "text" : "password";
+    password.setAttribute("type", type);
+
+    // toggle the icon
+    this.classList.toggle("bi-eye");
+});
+
+// prevent form submit
+const form = document.querySelector("form");
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+});

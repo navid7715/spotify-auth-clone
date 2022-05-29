@@ -131,6 +131,7 @@ body {
 
 .email-con {
   padding-bottom: 12px;
+  margin-bottom: 14px;
 }
 .email-con p {
   font-size: 0.775rem;
@@ -139,7 +140,7 @@ body {
   letter-spacing: normal;
   box-sizing: border-box;
   margin-top: 0px;
-  color: inherit;
+
   font-weight: 600;
 }
 
@@ -222,6 +223,7 @@ body {
   letter-spacing: 2px;
   font-size: 0.875rem;
   font-weight: 550;
+  cursor: pointer;
 }
 
 .line {
@@ -267,4 +269,9 @@ body {
 }
 .footer-btn:hover {
   border: 1px solid black;
+}
+
+.emailError,
+.passError {
+  color: red;
 }

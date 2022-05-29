@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up-Spotify</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="./signup.css" />
   </head>
   <body>
@@ -37,7 +41,8 @@
     <form action="" class="signUp-form">
       <div class="email-con">
         <p>What's your email?</p>
-        <input type="text" placeholder="Enter your email" />
+        <input type="text" placeholder="Enter your email" id="email" />
+        <p class="emailError"></p>
         <a
           href="https://accounts.spotify.com/en/login/phone?intent=signup&continue=https%3A%2F%2Fwww.spotify.com%2Faccount%2Foverview%2F"
           >Use phone number instead.</a
@@ -46,15 +51,23 @@
 
       <div class="email-con">
         <p>Confirm your email</p>
-        <input type="text" placeholder="Enter your email again. " />
+        <input
+          type="text"
+          placeholder="Enter your email again."
+          id="conEmail"
+        />
+        <p class="conEmailError"></p>
       </div>
       <div class="email-con">
         <p>Create a password</p>
-        <input type="text" placeholder="Create a password" />
+        <input type="password" placeholder="Create a password" id="pass" />
+        <i class="bi bi-eye-slash" id="togglePassword"></i>
+        <p class="passError"></p>
       </div>
       <div class="email-con">
         <p>What should we call you?</p>
-        <input type="text" placeholder="Enter a profile name." />
+        <input type="text" placeholder="Enter a profile name." id="name" />
+        <p class="nameError"></p>
       </div>
       <p class="line">This appears on your profile.</p>
       <div class="DOB">
@@ -62,7 +75,7 @@
         <div class="date">
           <div class="year box">
             <p>year</p>
-            <input type="text" placeholder="YYY" />
+            <input type="text" placeholder="YYY" id="year" />
           </div>
           <div class="month box">
             <p>month</p>
@@ -86,32 +99,46 @@
           </div>
           <div class="day box">
             <p>day</p>
-            <input type="text" placeholder="DD" />
+            <input type="number" placeholder="DD" id="day" />
           </div>
+          <p class="dateError"></p>
         </div>
       </div>
       <p class="gender-line">What's your gender?</p>
       <div class="gender">
         <div class="inner-gen">
-          <input type="radio" id="male" name="gender" value="male" />
+          <input
+            type="radio"
+            id="male"
+            name="gender"
+            value="1"
+            class="gender"
+          />
           <label for="male">Male</label>
         </div>
-
         <div class="inner-gen">
-          <input type="radio" id="female" name="gender" value="female" />
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="2"
+            class="gender"
+          />
           <label for="female">Female</label>
         </div>
 
         <div class="inner-gen">
           <input
             type="radio"
-            id="Non-binary"
+            id="nonBinary"
             name="gender"
-            value="Non-binary"
+            value="3"
+            class="gender"
           />
           <label for="Non-binary">Non-binary</label>
         </div>
       </div>
+      <p class="genderError"></p>
       <div class="tick">
         <input type="checkbox" />
         <p>I would prefer not to receive marketing messages from Spotify</p>
@@ -126,12 +153,13 @@
       <div class="captcha">
         <div class="inner-div">
           <div class="checkBox">
-            <input type="checkbox" />
+            <input type="checkbox" id="captcha" />
             <p>i'm not a robot</p>
           </div>
           <img src="./img/recaptcha.png" alt="" />
         </div>
       </div>
+      <p class="captchaError"></p>
       <div class="footer">
         <div class="TC">
           <p>
@@ -149,7 +177,7 @@
           </p>
         </div>
         <div class="send-div">
-          <button class="send-btn">Sign up</button>
+          <button class="send-btn" onclick="validateForm3()">Sign up</button>
           <p>Have an account? <a href="./main.html"> Log in</a>.</p>
         </div>
       </div>

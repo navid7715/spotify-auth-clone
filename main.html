@@ -51,13 +51,26 @@
           <div class="login-container">
             <div class="email-con">
               <p>Email address or username</p>
-              <input type="text" placeholder="Email address or username" />
+              <input
+                name="email"
+                type="name"
+                placeholder="Email address or username"
+                id="email"
+              />
+              <p class="emailError"></p>
             </div>
 
             <div class="email-con pass-con">
               <p>Password</p>
-              <input type="text" placeholder="Password" />
+              <input
+                name="pass"
+                type="password"
+                placeholder="Password"
+                id="pass"
+              />
+              <p class="passError"></p>
             </div>
+
             <a href="./forgotPass.html">Forgot your password?</a>
             <div class="bottom-con">
               <div class="checkBox">
@@ -65,7 +78,7 @@
                 <p>Remember me</p>
               </div>
               <div class="bottom-btn">
-                <button class="login-btn">
+                <button class="login-btn" onclick="return validateForm()">
                   <p>LOG IN</p>
                 </button>
               </div>
