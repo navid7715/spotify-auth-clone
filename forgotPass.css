@@ -247,6 +247,14 @@ body {
   margin: 0px 0px 0px 48px;
 }
 
-.emailError {
+.emailError,
+.captchaError {
   color: red;
+  font-size: 0.775rem;
+  line-height: 1.25rem;
+  text-transform: none;
+  letter-spacing: normal;
+  box-sizing: border-box;
+  margin-top: 0px;
+  font-weight: 600;
 }

@@ -47,12 +47,20 @@ function validateForm() {
 function validateForm2() {
     var returnval = true;
     var email = document.getElementById("email").value
+    var captcha = document.getElementById("captcha")
+
 
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         document.getElementsByClassName("emailError")[0].innerHTML = ""
     } else {
         document.getElementsByClassName("emailError")[0].innerHTML = "*invalid Username or Email"
     }
+
+
+    captcha.checked == true ? document.getElementsByClassName("captchaError")[0].innerHTML = "" :
+        document.getElementsByClassName("captchaError")[0].innerHTML = "*click on captcha"
+
+
 }
 
 
